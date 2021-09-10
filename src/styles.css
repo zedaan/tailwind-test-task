@@ -1,0 +1,47 @@
+/* tailwindcss utility classes */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gray-dark: #3A3A3A;
+  --green-color: #3FB990;
+  --brown-color: #E83C5B;
+}
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+
+@layer components {
+  .nav-item {
+    @apply hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase;
+  }
+  .input-field {
+    @apply text-gray-500 text-xs font-medium border-2 border-gray-500 py-2 px-2 rounded-lg outline-none capitalize;
+  }
+  .label-text {
+    @apply font-medium text-sm uppercase;
+  }
+  .btn {
+    @apply rounded-lg h-10 w-36 font-bold text-sm capitalize text-white ;
+  }
+  .btn-green {
+    background-color: var(--green-color) ; 
+  }
+  .btn-brown {
+    background-color: var(--brown-color) ; 
+  }
+  /* #file-innput{
+    display:none;
+  } */
+}
+
+@layer utilities {
+  .dark-title {
+    color: var(--gray-dark);
+  }
+}
+
+

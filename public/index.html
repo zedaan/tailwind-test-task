@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Home page</title>
+</head>
+<body class="pb-10 font-nu">
+
+  <!-- NAVBAR SECTION -->
+  <nav class="shadow">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <svg id="menu-icon" class="block  h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center justify-center lg\:items-stretch lg:justify-start lg:items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <img class="hidden lg:block " src="img/logo.svg" alt="">
+          </div>
+          <div class="hidden lg:block sm:ml-6 ">
+            <div class="flex space-x-4">
+              <a href="" class="nav-item font-extrabold dark-title">Dashboard</a>
+              <a href="" class="nav-item font-extrabold dark-title">Accounts</a>
+              <a href="" class="nav-item font-extrabold dark-title">Analytics</a>
+              <a href="" class="nav-item font-extrabold dark-title">Ugc</a>
+              <a href="" class="nav-item font-extrabold dark-title">Influencer</a>
+              <a href="" class="nav-item font-extrabold dark-title">Settings</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+  
+          <!-- Profile dropdown -->
+          <div class="ml-3 relative">
+            <div>
+              <button id="profile-btn" type="button" class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="sr-only">Open user menu</span>
+                <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </button>
+            </div>
+  
+            <div id="user-profile" class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#" class="nav-item block">Dashboard</a>
+        <a href="#" class="nav-item block">Accounts</a>
+        <a href="#" class="nav-item block">Analytics</a>
+        <a href="#" class="nav-item block">Ugc</a>
+        <a href="#" class="nav-item block">Influencer</a>
+        <a href="#" class="nav-item block">Settings</a>
+      </div>
+    </div>
+  </nav>
+  <!-- NAVBAR SECTION -->
+
+  <!-- SUBSCRIPTION SECTION -->
+  <div class="subscription mt-8">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <h2 class="uppercase font-bold text-2xl dark-title">subscription data</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">Name</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">Type</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full" >
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option>Please select</option>
+                <option>Type one</option>
+                <option>Type two</option>
+                <option>Type three</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">subscription start</label>
+          <input type="date" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">subscription end</label>
+          <input type="date" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">Account manager</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option>Please select</option>
+                <option>admin</option>
+                <option>user</option>
+                <option>user</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">category</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option></option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">language</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="capitalize">English</option>
+                <option class="capitalize">Russian</option>
+                <option class="capitalize">china</option>
+                <option class="capitalize">urdu</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">status</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="capitalize">created</option>
+                <option class="capitalize">pending</option>
+                <option class="capitalize">completed</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">user count</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="capitalize">01</option>
+                <option class="capitalize">02</option>
+                <option class="capitalize">03</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">social sccounts</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="capitalize">01</option>
+                <option class="capitalize">02</option>
+                <option class="capitalize">03</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">domains</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="capitalize">01</option>
+                <option class="capitalize">02</option>
+                <option class="capitalize">03</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">sources</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="capitalize">unlimited</option>
+                <option class="capitalize">01</option>
+                <option class="capitalize">02</option>
+                <option class="capitalize">03</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">social streem</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="capitalize">unlimited</option>
+                <option class="capitalize">01</option>
+                <option class="capitalize">02</option>
+                <option class="capitalize">03</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">powered by</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="capitalize"></option>
+                <option class="capitalize">01</option>
+                <option class="capitalize">02</option>
+                <option class="capitalize">03</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">rightsmanagment</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full">
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="capitalize"></option>
+                <option class="capitalize">01</option>
+                <option class="capitalize">02</option>
+                <option class="capitalize">03</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SUBSCRIPTION SECTION -->
+
+  <!-- COMPANY DATA SECTION -->
+  <div class="company mt-10">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <h2 class="uppercase font-bold text-2xl dark-title">company data</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 items-end ">
+        <div class=" mt-1 ">
+          <label class="filelabel w-full flex input-field h-28 items-center justify-between px-4">
+            <i class="text-sm font-bold dark-title uppercase"> logo upload
+            </i>
+            <span class="h-20 w-20 text-xs font-semibold uppercase text-green-500 rounded-full border border-gray-300 flex items-center justify-center cursor-pointer ">
+                Add File
+            </span>
+            <input class=" hidden" id="file-innput" name="booking_attachment" type="file"/>
+        </label>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">Name (long)</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">Name (short)</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">Website</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">street & no</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">postal code</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">city</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">country</label>
+          <div class="relative rounded-md w-full">
+            <input type="text" name="price" id="price" class="input-field w-full" >
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option>germany</option>
+                <option>usa</option>
+                <option>uk</option>
+                <option>china</option>
+                <option>japan</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">register name</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">register number</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">url prefix</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">right #</label>
+          <input type="text" class="input-field">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- COMPANY DATA SECTION -->
+
+  <!-- SUBSCRIPTION ADMIN SECTION -->
+  <div class="subsctiption-admin mt-10">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <h2 class="uppercase font-bold text-2xl dark-title">add subscription admin</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 items-end ">
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">company</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">last name</label>
+          <input type="text" class="input-field">
+        </div>
+        <div class="flex flex-col mt-1">
+          <label class="label-text mb-1 text-sm font-bold dark-title">email</label>
+          <input type="email" class="input-field">
+        </div>
+        <div class="flex grid-cols-2 gap-2 mt-1">
+          <button class="px-3 py-2 rounded-lg text-sm font-medium uppercase border-2 w-full text-green-600 border-green-600">Search</button>
+          <button class="px-3 py-2 rounded-lg text-sm font-medium uppercase border-2 w-full text-gray-400 border-gray-400">invite</button>
+        </div>
+      </div>
+      <div class="table w-full mt-8">
+        <table class="min-w-full">
+          <thead class="shadow-md">
+            <tr class="">
+              <th scope="col" class="text-sm font-bold uppercase py-2 text-left dark-title">
+                company
+              </th>
+              <th scope="col" class="text-sm font-bold uppercase py-2 text-left dark-title">
+                last name
+              </th>
+              <th scope="col" class="text-sm font-bold uppercase py-2 text-left dark-title">
+                email
+              </th>
+              <th scope="col" class="text-sm font-medium uppercase py-2 text-left dark-title">
+                
+              </th>
+            </tr>
+          </thead>
+          <tbody class="hite divide-y divide-gray-300">
+            <tr>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-semibold capitalize dark-title ">Squarlovin</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-semibold capitalize dark-title ">resch</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-sm dark-title">aa@squarlovin.com</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap text-sm text-gray-500">
+                <button class="px-3 py-2 rounded-lg text-sm font-medium uppercase border-2 w-full text-green-600 border-green-600 ">add admin</button>
+              </td>
+            </tr>
+            <tr>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-semibold capitalize dark-title ">Squarlovin</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-semibold capitalize dark-title ">resch</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-sm dark-title">aa@squarlovin.com</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap text-sm text-gray-500">
+                <button class="px-3 py-2 rounded-lg text-sm font-medium uppercase border-2 w-full text-green-600 border-green-600 ">add admin</button>
+              </td>
+            </tr>
+            <tr>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-semibold capitalize dark-title ">Squarlovin</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-semibold capitalize dark-title ">resch</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-sm dark-title">aa@squarlovin.com</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap text-sm text-gray-500">
+                <button class="px-3 py-2 rounded-lg text-sm font-medium uppercase border-2 w-full text-green-600 border-green-600 ">add admin</button>
+              </td>
+            </tr>
+            <tr>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-semibold capitalize dark-title ">Squarlovin</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-semibold capitalize dark-title ">resch</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-sm dark-title">aa@squarlovin.com</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap text-sm text-gray-500">
+                <button class="px-3 py-2 rounded-lg text-sm font-medium uppercase border-2 w-full text-green-600 border-green-600 ">add admin</button>
+              </td>
+            </tr>
+            <tr>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-semibold capitalize dark-title ">Squarlovin</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-semibold capitalize dark-title ">resch</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap">
+                <p class="text-sm font-sm dark-title">aa@squarlovin.com</p>
+              </td>
+              <td class=" py-4 whitespace-nowrap text-sm text-gray-500">
+                <button class="px-3 py-2 rounded-lg text-sm font-medium uppercase border-2 w-full text-green-600 border-green-600 ">add admin</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- SUBSCRIPTION ADMIN SECTION -->
+
+  <!-- DOMAINS LANGUAGES SECTION -->
+  <div class="languages mt-10">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <h2 class="uppercase font-bold text-2xl dark-title">domain languages</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+        <div class=" mt-1">
+          <div class="relative rounded-md w-full">
+            <input type="text" class="input-field w-full" >
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="text-sm font-semibold dark-title">ar-eg</option>
+                <option class="text-sm font-semibold dark-title">en-gb</option>
+                <option class="text-sm font-semibold dark-title">fr-ch</option>
+                <option class="text-sm font-semibold dark-title">de-de</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-1">
+          <div class="relative rounded-md w-full">
+            <input type="text" class="input-field w-full" >
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="text-sm font-semibold dark-title">en-gb</option>
+                <option class="text-sm font-semibold dark-title">ar-eg</option>
+                <option class="text-sm font-semibold dark-title">fr-ch</option>
+                <option class="text-sm font-semibold dark-title">de-de</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class=" mt-1">
+          <div class="relative rounded-md w-full">
+            <input type="text" class="input-field w-full" >
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="text-sm font-semibold dark-title">fr-ch</option>
+                <option class="text-sm font-semibold dark-title">en-gb</option>
+                <option class="text-sm font-semibold dark-title">ar-eg</option>
+                <option class="text-sm font-semibold dark-title">de-de</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col mt-1">
+          <div class="relative rounded-md w-full">
+            <input type="text" class="input-field w-full" >
+            <div class="absolute inset-y-0 right-0 flex items-center w-full px-1">
+              <select class="outline-none bg-transparent w-full">
+                <option class="text-sm font-semibold dark-title">de-de</option>
+                <option class="text-sm font-semibold dark-title">ar-eg</option>
+                <option class="text-sm font-semibold dark-title">en-gb</option>
+                <option class="text-sm font-semibold dark-title">fr-ch</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons mt-8">
+        <h2 class="uppercase font-bold text-2xl dark-title">sections</h2>
+        <div class="mt-4">
+          <p class="uppercase font-bold text-sm dark-title">pre-collection</p>
+          <div class="flex flex-wrap mt-1">
+            <button class="btn btn-green mr-6 mb-4">collector</button>
+            <button class="btn btn-green mr-6 mb-4">accepted media</button>
+            <button class="btn btn-green mr-6 mb-4">removed media</button>
+            <button class="btn btn-green mr-6 mb-4">brand guideliness</button>
+          </div>
+        </div>
+        <div class="mt-4">
+          <p class="uppercase font-bold text-sm dark-title">media</p>
+          <div class="flex flex-wrap mt-1">
+            <button class="btn btn-brown mr-6 mb-4">collector</button>
+            <button class="btn btn-brown mr-6 mb-4">get right</button>
+            <button class="btn btn-green mr-6 mb-4">manage</button>
+            <button class="btn btn-green mr-6 mb-4">published</button>
+            <button class="btn btn-green mr-6 mb-4">uploads</button>
+            <button class="btn btn-green mr-6 mb-4">reported</button>
+            <button class="btn btn-green mr-6 mb-4">removed</button>
+          </div>
+        </div>
+        <div class="mt-4">
+          <p class="uppercase font-bold text-sm dark-title">analytics</p>
+          <div class="flex flex-wrap mt-1">
+            <button class="btn btn-green mr-6 mb-4">overview</button>
+            <button class="btn btn-green mr-6 mb-4">media</button>
+            <button class="btn btn-green mr-6 mb-4">products</button>
+            <button class="btn btn-green mr-6 mb-4">performance</button>
+            <button class="btn btn-green mr-6 mb-4">ambassador</button>
+            <button class="btn btn-green mr-6 mb-4">revenue</button>
+            <button class="btn btn-green mr-6 mb-4">conversations</button>
+            <button class="btn btn-green mr-6 mb-4">reports</button>
+          </div>
+        </div>
+        <div class="mt-4">
+          <p class="uppercase font-bold text-sm dark-title">contant hub</p>
+          <div class="flex flex-wrap mt-1">
+            <button class="btn btn-green mr-6 mb-4">overview</button>
+            <button class="btn btn-green mr-6 mb-4">exports</button>
+            <button class="btn btn-green mr-6 mb-4">connections</button>
+            <button class="btn btn-green mr-6 mb-4">API</button>
+            <button class="btn btn-green mr-6 mb-4">teams</button>
+          </div>
+        </div>
+        <div class="mt-4">
+          <p class="uppercase font-bold text-sm dark-title">settings</p>
+          <div class="flex flex-wrap mt-1">
+            <button class="btn btn-green mr-6 mb-4">basic</button>
+            <button class="btn btn-green mr-6 mb-4">streams</button>
+            <button class="btn btn-green mr-6 mb-4">products</button>
+            <button class="btn btn-green mr-6 mb-4">sources</button>
+            <button class="btn btn-green mr-6 mb-4">legal</button>
+            <button class="btn btn-green mr-6 mb-4">requests</button>
+            <button class="btn btn-green mr-6 mb-4">pre-collector</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- DOMAINS LANGUAGES SECTION -->
+
+  <script src="app.js"></script>
+  
+</body>
+</html>
